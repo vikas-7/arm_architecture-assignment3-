@@ -1,3 +1,5 @@
+;Below code implements sigmoid Function, value is stored in register S4.
+
 	area     Sigmoid, CODE, READONLY
      	EXPORT __main
      	ENTRY 
@@ -13,7 +15,7 @@ __main  FUNCTION
 		
 LOOP1   CMP R1,R0;Compare 'i' and 'n' 
         BLE LOOP;if i < n goto LOOP
-        B sigmoid;else goto stop
+        B sigmoid;calculate SIGMOID Function
 		
 LOOP    VMUL.F32 S1,S1,S2; t = t*x
         VMOV.F32 S5,R1;Moving the bit stream in R1('i') to S5(floating point register)

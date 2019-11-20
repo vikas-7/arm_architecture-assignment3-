@@ -108,6 +108,7 @@ LOOP    VMUL.F32 S10,S10,S0; t = t*x
 		
 sigmoid  VADD.F32 S12,S9,S11 
 		VDIV.F32 S12,S9,S12
+		BL printMsg
 		B stop	
 		
 		
